@@ -5,7 +5,7 @@ This repo contains kubedb demo code
 
 1. Setup CAP on a Kube cluster(for this demo we used EKS)
 
-2. Install `appscode/service-broker` using the latest helm charts:
+2. Install [appscode/service-broker](https://github.com/appscode/service-broker) using the latest helm charts:
 
    https://appscode.com/products/service-broker/0.3.1/setup/install/#install-service-broker
    
@@ -21,7 +21,7 @@ This repo contains kubedb demo code
 
 ## Steps:
 
-1. Register `appscode/service-broker` with `cf` and verify:
+1. Register [appscode/service-broker](https://github.com/appscode/service-broker) with `cf` and verify:
    
    ```
    cf create-service-broker appscode-service-broker user pass https://appscode-service-broker.appscode.svc
