@@ -1,0 +1,3 @@
+[submodule "python-mongodb-blog"]
+	path = python-mongodb-blog
+	url = git@github.com:scf-samples/python-mongodb-blog.git
