@@ -1,0 +1,16 @@
+{{ $currentScope := . }}
+{{ range $item := .Values.catalog.names }}
+{{- with $currentScope }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ $item }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "service-broker.labels" . | nindent 4 }}
+data:
+{{- $files := printf "catalog/%s/**.yaml" $item }}
+{{ ($.Files.Glob $files).AsConfig | indent 2 }}
+{{- end }}
+---
+{{- end }}

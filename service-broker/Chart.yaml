@@ -1,0 +1,12 @@
+apiVersion: v1
+appVersion: 0.3.1
+description: Run AppsCode cloud services on Kubernetes via the Open Service Broker
+  API
+home: https://github.com/appscode/service-broker
+icon: https://cdn.appscode.com/images/icon/service-broker.png
+keywords:
+- service catalog
+- service broker
+- appscode
+name: service-broker
+version: 0.3.1
