@@ -7,7 +7,7 @@ replicaCount: 1
 broker:
   registry: appscode
   repository: service-broker
-  tag: 0.3.1
+  tag: suse-demo2
 cleaner:
   registry: appscode
   repository: kubectl
@@ -101,7 +101,7 @@ catalog:
   path: /etc/config/catalog
   controller:
     # set enabled=false, if not used with service catalog
-    enabled: true
+    enabled: false
     serviceAccount:
       namespace: catalog
       name: service-catalog-controller-manager
