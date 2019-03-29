@@ -1,0 +1,19 @@
+Install: 0.3.1
+
+1. values.yaml: suse-demo2 (having hardcoded db-> blog)
+
+2. manually create `blog` db (and check if creating entries is needed), 
+    db.movie.insert({"name":"batman"});
+refer:https://github.com/kubedb/cli/blob/master/docs/guides/mongodb/quickstart/quickstart.md
+
+3. Create user in blog:
+    > use blog
+    > db.createUser({user: "root", pwd: "***", roles: [ { role: "readWrite", db: "blog" }]})
+
+4. Use following curl:
+
+curl -L -vv --fail -X POST http://mongoblog.cap.bsingh.aws.howdoi.website/post/new --data 'post[title]=desired-title' --data 'post[body]=desired-body'
+
+db.posts.find() to verify entries in the db
+
+create a CF SG to whitelist mongodb port 27017 (rules.json) 
