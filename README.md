@@ -112,4 +112,5 @@ To view CRD object:
 
 ```
 kubectl get mg
+kubectl describe mg
 ```
