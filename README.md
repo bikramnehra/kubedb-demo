@@ -32,7 +32,7 @@ This repo contains kubedb demo code
 
    ```
    cf enable-service-access mongodb
-   cf service-access
+   cf marketplace
    ```
    
 3. Create and verify `mongodb` service instance and verify:
