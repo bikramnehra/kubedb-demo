@@ -65,7 +65,7 @@ This repo contains kubedb demo code
    ```
   
 
-## Workaround:
+## Connecting to MongoShell:
 
 
 For the purpose of this demo we need to manually create a database named `blog` after deploying `mongodb-svc`
