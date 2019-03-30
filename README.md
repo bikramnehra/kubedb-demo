@@ -65,7 +65,7 @@ This repo contains kubedb demo code
    ```
   
 
-## Connecting to MongoShell:
+## Connecting to Mongo Shell:
 
 
 For the purpose of this demo we need to manually create a database named `blog` and user named `root` granting `readWrite` access on `blog` after deploying `mongodb-svc`
