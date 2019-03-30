@@ -107,3 +107,9 @@ To check the data in the `blog` table:
 ```
 db.posts.find()
 ```
+
+To view CRD object:
+
+```
+kubectl get mg
+```
