@@ -65,10 +65,10 @@ This repo contains kubedb demo code
    ```
   
 
-## Workaround:
+## Connecting to Mongo Shell:
 
 
-For the purpose of this demo we need to manually create a database named `blog` after deploying `mongodb-svc`
+For the purpose of this demo we need to manually create a database named `blog` and user named `root` granting `readWrite` access on `blog` after deploying `mongodb-svc`
 
 Log into mongo shell:
 
@@ -106,4 +106,11 @@ To check the data in the `blog` table:
 
 ```
 db.posts.find()
+```
+
+To view CRD object:
+
+```
+kubectl get mg
+kubectl describe mg
 ```
