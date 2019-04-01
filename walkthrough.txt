@@ -1,0 +1,38 @@
+> cf create-service-broker appscode-service-broker user pass https://appscode-service-broker.appscode.svc
+
+> cf service-brokers
+
+> cf enable-service-access mongodb
+
+> cf marketplace -s mongodb
+
+> cf create-service mongodb demo-mongodb mongodb-svc
+
+> cf services
+
+> cf push -m 1G --no-start
+
+> cf apps
+
+> cf bind-service mongoblog mongodb-svc
+
+> cf env mongoblog   pass: fF7NKk7X9IfBKLAn
+
+---create user root with readWrite access on db blog---
+
+> kubectl exec -it app-f436627f-97aa-4612-961a-83f5cdc47f14-0 -n default sh
+> mongo admin
+> db.auth("root","fF7NKk7X9IfBKLAn")
+
+> use blog
+> db.createUser({user: "root", pwd: "fF7NKk7X9IfBKLAn", roles: [ { role: "readWrite", db: "blog" }]})
+
+---end---
+
+> cf start mongoblog
+> cf apps
+GOTO: https://mongoblog.cap.bsingh.aws.howdoi.website
+Create some entry in the website
+
+Run following cmd in mongoshell to see entries in db:
+> db.posts.find()
